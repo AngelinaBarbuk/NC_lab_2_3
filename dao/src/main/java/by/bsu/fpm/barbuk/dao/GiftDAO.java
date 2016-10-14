@@ -1,5 +1,6 @@
 package by.bsu.fpm.barbuk.dao;
 
+
 import by.bsu.fpm.barbuk.entity.gifts.Gift;
 
 import java.beans.PropertyVetoException;

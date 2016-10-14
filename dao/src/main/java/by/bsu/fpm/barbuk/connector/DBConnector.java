@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Locale;
+import java.util.logging.Logger;
 
 /**
  * Created by VVV on 20.07.2016.
@@ -13,13 +14,14 @@ import java.util.Locale;
 public class DBConnector {
     private static DBConnector datasource;
     private Connection connection;
+    Logger logger = Logger.getLogger(DBConnector.class.getName());
 
     private DBConnector() throws IOException, SQLException, PropertyVetoException {
         Locale.setDefault(Locale.ENGLISH);
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.info(e.getMessage());
         }
         connection= DriverManager.getConnection(
                 "jdbc:oracle:thin:@localhost:1521:XE", "angelina",

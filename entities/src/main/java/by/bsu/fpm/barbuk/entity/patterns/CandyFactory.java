@@ -5,53 +5,13 @@ import by.bsu.fpm.barbuk.entity.candies.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Scanner;
+
 
 public class CandyFactory {
 
     private static final String LOLLIPOP = "Lollipop";
     private static final String CHOCOLATE = "Chocolate";
     private static final String NUT = "Nut";
-
-    public static Candy getCandy(Scanner scanner, String candyType){
-        if(candyType==null)
-            return null;
-        switch (candyType){
-            case LOLLIPOP:
-                return getLollipop(scanner);
-            case CHOCOLATE:
-                return getChocolateCandy(scanner);
-            case NUT:
-                return getNutCandy(scanner);
-        }
-        return null;
-    }
-
-    private static Candy getNutCandy(Scanner scanner) {
-        NutCandy nutCandy = new NutCandy();
-        nutCandy.setCandyName(scanner.next());
-        nutCandy.setWeight(scanner.nextInt());
-        nutCandy.setCost(scanner.nextInt());
-        nutCandy.setNutName(scanner.next());
-        return nutCandy;
-    }
-
-    private static Candy getChocolateCandy(Scanner scanner) {
-        ChocolateCandy chocolateCandy = new ChocolateCandy();
-        chocolateCandy.setCandyName(scanner.next());
-        chocolateCandy.setWeight(scanner.nextInt());
-        chocolateCandy.setCost(scanner.nextInt());
-        return chocolateCandy;
-    }
-
-    private static Candy getLollipop(Scanner scanner) {
-        Lollipop lollipop = new Lollipop();
-        lollipop.setCandyName(scanner.next());
-        lollipop.setWeight(scanner.nextInt());
-        lollipop.setCost(scanner.nextInt());
-        lollipop.setColor(scanner.next());
-        return lollipop;
-    }
 
     public static Candy getCandy(ResultSet resultSet) throws SQLException {
         String candyType = resultSet.getString(5);

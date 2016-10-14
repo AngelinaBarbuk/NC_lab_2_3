@@ -2,11 +2,8 @@ package by.bsu.fpm.barbuk;
 
 
 import by.bsu.fpm.barbuk.dao.CandyDAO;
-import by.bsu.fpm.barbuk.dao.GiftDAO;
 import by.bsu.fpm.barbuk.dao.implementation.CandyDAOImpl;
-import by.bsu.fpm.barbuk.dao.implementation.GiftDAOImpl;
 import by.bsu.fpm.barbuk.entity.candies.Candy;
-import by.bsu.fpm.barbuk.entity.gifts.Gift;
 
 import java.beans.PropertyVetoException;
 import java.io.IOException;

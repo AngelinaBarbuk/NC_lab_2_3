@@ -3,7 +3,6 @@ package by.bsu.fpm.barbuk.dao.implementation;
 import by.bsu.fpm.barbuk.connector.DBConnector;
 import by.bsu.fpm.barbuk.dao.CandyDAO;
 import by.bsu.fpm.barbuk.entity.candies.Candy;
-import by.bsu.fpm.barbuk.entity.gifts.Gift;
 import by.bsu.fpm.barbuk.entity.patterns.CandyFactory;
 
 import java.beans.PropertyVetoException;

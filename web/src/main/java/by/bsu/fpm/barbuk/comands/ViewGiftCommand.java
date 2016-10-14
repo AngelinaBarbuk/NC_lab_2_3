@@ -9,11 +9,13 @@ import java.beans.PropertyVetoException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by B on 14.10.2016.
  */
 public class ViewGiftCommand implements ActionCommand {
+    Logger logger = Logger.getLogger(ViewGiftCommand.class.getName());
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -25,12 +27,13 @@ public class ViewGiftCommand implements ActionCommand {
             Gift gift = GiftService.getInstance().getGiftById(giftId);
             session.setAttribute("Gift",gift);
         } catch (SQLException e) {
+            logger.info(e.getMessage());
             page = "/fail.jsp";
             return page;
         } catch (PropertyVetoException e) {
-            e.printStackTrace();
+            logger.info(e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.info(e.getMessage());
         }
         page = "/Gift.jsp";
         return page;
