@@ -6,6 +6,7 @@ public class NutCandy extends Candy {
     private String nutName;
 
     public NutCandy() {
+        super();
     }
 
     public NutCandy(String candyName, int weight, int cost, String nutName) {

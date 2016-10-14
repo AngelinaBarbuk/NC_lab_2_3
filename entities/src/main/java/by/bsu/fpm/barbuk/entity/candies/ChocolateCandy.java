@@ -4,6 +4,7 @@ package by.bsu.fpm.barbuk.entity.candies;
 public class ChocolateCandy extends Candy {
 
     public ChocolateCandy()  {
+        super();
     }
 
     public ChocolateCandy(String candyName, int weight, int cost) {
