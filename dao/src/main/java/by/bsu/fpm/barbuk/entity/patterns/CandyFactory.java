@@ -74,6 +74,7 @@ public class CandyFactory {
         nutCandy.setCandyName(resultSet.getString(2));
         nutCandy.setCost(resultSet.getInt(3));
         nutCandy.setWeight(resultSet.getInt(4));
+        nutCandy.setType(resultSet.getString(5));
         nutCandy.setNutName(resultSet.getString("NUT_CANDY_NUT_NAME"));
         return nutCandy;
     }
@@ -84,6 +85,7 @@ public class CandyFactory {
         chocolateCandy.setCandyName(resultSet.getString(2));
         chocolateCandy.setCost(resultSet.getInt(3));
         chocolateCandy.setWeight(resultSet.getInt(4));
+        chocolateCandy.setType(resultSet.getString(5));
         return chocolateCandy;
     }
 
@@ -93,6 +95,7 @@ public class CandyFactory {
         lollipop.setCandyName(resultSet.getString(2));
         lollipop.setCost(resultSet.getInt(3));
         lollipop.setWeight(resultSet.getInt(4));
+        lollipop.setType(resultSet.getString(5));
         lollipop.setColor(resultSet.getString("LOLLIPOP_COLOR"));
         return lollipop;
     }

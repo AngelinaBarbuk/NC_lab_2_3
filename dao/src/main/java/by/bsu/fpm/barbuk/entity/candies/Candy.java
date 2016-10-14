@@ -6,6 +6,7 @@ public abstract class Candy {
     private String candyName;
     private Integer weight;
     private Integer cost;
+    private String type;
 
     public Candy() {
     }
@@ -14,6 +15,14 @@ public abstract class Candy {
         this.candyName = candyName;
         this.weight = weight;
         this.cost = cost;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getId() {
@@ -58,8 +67,8 @@ public abstract class Candy {
 
     @Override
     public String toString() {
-        return  "candyName='" + candyName + '\'' +
-                ", weight=" + weight +
-                ", cost=" + cost;
+        return  "<p> Candy Name: " + candyName  +
+                "</p><p>Weight: " + weight +
+                "</p><p>Cost: " + cost+"</p>";
     }
 }

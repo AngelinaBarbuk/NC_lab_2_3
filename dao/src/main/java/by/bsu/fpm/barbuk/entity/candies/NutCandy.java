@@ -23,9 +23,8 @@ public class NutCandy extends Candy {
 
     @Override
     public String toString() {
-        return "NutCandy{" +
+        return "<p>Type: NutCandy</p>" +
                 super.toString()+
-                "nutName='" + nutName + '\'' +
-                '}';
+                "<p>Nut: " + nutName + "</p>";
     }
 }

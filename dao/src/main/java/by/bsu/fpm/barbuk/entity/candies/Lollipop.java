@@ -24,9 +24,8 @@ public class Lollipop extends Candy {
 
     @Override
     public String toString() {
-        return "Lollipop{" +
+        return "<p>Type: Lollipop</p>" +
                 super.toString()+
-                "color='" + color + '\'' +
-                '}';
+                "<p>Color: " + color  +"</p>";
     }
 }

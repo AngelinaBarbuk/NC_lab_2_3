@@ -12,8 +12,7 @@ public class ChocolateCandy extends Candy {
 
     @Override
     public String toString() {
-        return "ChocolateCandy{" +
-                super.toString()+
-                "}";
+        return "<p>Type: ChocolateCandy </p>" +
+                super.toString();
     }
 }
